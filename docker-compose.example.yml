@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  server:
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    build: .
+    container_name: api_server
+    environment: # See .env.example for more options
+      PORT: 8080
+      DB_HOST: db
+      DB_USER: demoapiuser
+      DB_PASSWORD: changeme123
+      DB_NAME: production
+      REDIS_HOST: redis:6379
+      GIN_MODE: release
+      # FQDN: api.mydomain.com
+      # COOKIE_DOMAIN: mydomain.com
+      # COOKIE_SAME_SITE: strict
+      # COOKIE_SECURE: true
+      # MAIL_HOST: mail.host.tld
+      # MAIL_PORT: 587
+      # MAIL_USER: myusername
+      # MAIL_PASSWORD: mypassword
+      # MAIL_FROM: me@mydomain.com
+      # MAIL_FROM_NAME: My Name
+      # EMAIL_VERIFIED_REDIRECT_URL: https://mydomain.com/verified
+      # RESET_PASSWORD_URL: https://mydomain.com/forgot-password
+    depends_on:
+      - db
+      - redis
+
+  db:
+    container_name: api_postgres
+    restart: unless-stopped
+    image: postgres:15
+    environment:
+      POSTGRES_USER: demoapiuser
+      POSTGRES_PASSWORD: changeme123
+      POSTGRES_DB: production
+    volumes:
+      - data:/var/lib/postgresql/data
+
+  redis:
+    container_name: api_redis
+    restart: unless-stopped
+    image: redis
+    volumes:
+      - cache:/data
+
+volumes:
+  data:
+    driver: local
+  cache:
+    driver: local
