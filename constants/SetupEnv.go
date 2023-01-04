@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 
 	_ "github.com/joho/godotenv/autoload"
@@ -39,6 +40,8 @@ var DB_NAME string
 var DB_SSLMODE string
 var EMAIL_VERIFIED_REDIRECT_URL string
 var RESET_PASSWORD_URL string
+var TRUSTED_PROXIES []string
+var TRUSTED_PLATFORM string
 
 func SetupEnv() {
 	oneDay, err := time.ParseDuration("24h")
@@ -232,4 +235,9 @@ func SetupEnv() {
 		panic(err)
 	}
 	APPKEY_CACHE_LIFETIME = d
+
+	TRUSTED_PLATFORM = os.Getenv("TRUSTED_PLATFORM")
+
+	s = os.Getenv("TRUSTED_PROXIES")
+	TRUSTED_PROXIES = strings.Split(s, ",")
 }
