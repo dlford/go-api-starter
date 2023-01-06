@@ -22,6 +22,9 @@ func AuthorizeRequest(c *gin.Context) (models.User, models.AppkeyAuth, error) {
 	user, ttl, err := cache.GetUserFromAccessToken(bearerToken)
 	if err != nil {
 		user, keyAuth, err = checkAppkey(bearerToken)
+		if err != nil {
+			return user, keyAuth, error
+		}
 	}
 
 	c.Header("X-Bearer-Token-TTL", fmt.Sprint(ttl))
