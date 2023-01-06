@@ -2,9 +2,10 @@ package cache
 
 import (
 	"api/models"
-	"encoding/json"
 	"errors"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 func GetUserFromAccessToken(bearerToken string) (models.User, int, error) {
@@ -14,15 +15,9 @@ func GetUserFromAccessToken(bearerToken string) (models.User, int, error) {
 	if len(matches) > 0 {
 		bearerCacheKey := matches[0]
 
-		userJson := DB.Get(Ctx, bearerCacheKey).Val()
-		if userJson != "" {
-
-			var user models.User
-			err := json.Unmarshal([]byte(userJson), &user)
-			if err != nil {
-				return models.User{}, 0, err
-			}
-
+		var user models.User
+		err := DB.Get(Ctx, bearerCacheKey).Scan(&user)
+		if err == nil || user.ID != uuid.Nil {
 			ttlRaw := DB.TTL(Ctx, matches[0])
 			if ttlRaw == nil || ttlRaw.Val() < 0 {
 				return models.User{}, 0, errors.New("Unauthorized")
