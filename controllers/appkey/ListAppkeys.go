@@ -11,7 +11,7 @@ import (
 // @Security Bearer
 // @Summary List application keys
 // @Description List all application keys for the current user
-// @Tags User Account
+// @Tags Application Keys
 // @Accept json
 // @Produce json
 // @Success 200 {object} models.ResData[[]models.Appkey]

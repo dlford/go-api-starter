@@ -11,7 +11,7 @@ import (
 // @Security Bearer
 // @Summary Revoke session
 // @Description Revoke access to a session and invalidate its bearer tokens
-// @Tags User Account
+// @Tags Sessions
 // @Accept json
 // @Produce json
 // @Param id path string true "Session ID" Format(uuid)

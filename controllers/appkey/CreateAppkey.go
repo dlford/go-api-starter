@@ -14,7 +14,7 @@ import (
 // @Security Bearer
 // @Summary Create application key
 // @Description Create an application key for the current user (omit `otp_code` if OTP is not enabled, omit `password` if OTP is enabled)
-// @Tags User Account
+// @Tags Application Keys
 // @Accept json
 // @Produce json
 // @Param input body models.CreateAppkeyInput true "Name and permissions"

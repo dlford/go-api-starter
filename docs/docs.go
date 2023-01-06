@@ -249,7 +249,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Application Keys"
                 ],
                 "summary": "List application keys",
                 "responses": {
@@ -293,7 +293,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Application Keys"
                 ],
                 "summary": "Create application key",
                 "parameters": [
@@ -350,7 +350,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Application Keys"
                 ],
                 "summary": "Delete application key",
                 "parameters": [
@@ -407,7 +407,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Email Address"
                 ],
                 "summary": "Verify email address",
                 "parameters": [
@@ -468,7 +468,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Email Address"
                 ],
                 "summary": "Retry email verification",
                 "responses": {
@@ -514,7 +514,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Two Factor Authentication"
                 ],
                 "summary": "Set up OTP",
                 "responses": {
@@ -558,7 +558,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Two Factor Authentication"
                 ],
                 "summary": "Disable OTP",
                 "parameters": [
@@ -613,7 +613,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Two Factor Authentication"
                 ],
                 "summary": "Enable OTP",
                 "parameters": [
@@ -670,7 +670,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Password"
                 ],
                 "summary": "Change password",
                 "parameters": [
@@ -726,7 +726,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Password"
                 ],
                 "summary": "Reset password",
                 "parameters": [
@@ -782,7 +782,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Password"
                 ],
                 "summary": "Forgot password",
                 "parameters": [
@@ -827,7 +827,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "List sessions",
                 "responses": {
@@ -866,7 +866,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Sign In",
                 "parameters": [
@@ -921,7 +921,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Sign out",
                 "responses": {
@@ -960,7 +960,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Refresh token",
                 "responses": {
@@ -1000,7 +1000,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Revoke session",
                 "parameters": [

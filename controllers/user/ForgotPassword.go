@@ -10,7 +10,7 @@ import (
 
 // @Summary Forgot password
 // @Description Request a password reset email (link is valid for 15 minutes)
-// @Tags User Account
+// @Tags Password
 // @Accept json
 // @Produce json
 // @Param request body models.UserEmailInput true "Email"

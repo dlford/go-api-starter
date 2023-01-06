@@ -12,7 +12,7 @@ import (
 
 // @Summary Reset password
 // @Description Reset password using password reset link (omit `otp_code` if OTP is not enabled)
-// @Tags User Account
+// @Tags Password
 // @Accept json
 // @Produce json
 // @Param request body models.ResetUserPasswordInput true "Password Reset"

@@ -13,7 +13,7 @@ import (
 // @Security Bearer
 // @Summary Disable OTP
 // @Description Allow sign in without OTP
-// @Tags User Account
+// @Tags Two Factor Authentication
 // @Accept json
 // @Produce json
 // @Param request body models.UserPasswordInput true "OTP code"

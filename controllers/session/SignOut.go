@@ -11,7 +11,7 @@ import (
 // @Security Bearer
 // @Summary Sign out
 // @Description Delete current session and invalidate its bearer tokens
-// @Tags User Account
+// @Tags Sessions
 // @Accept json
 // @Produce json
 // @Success 200 {object} models.ResMsg

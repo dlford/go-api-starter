@@ -16,7 +16,7 @@ import (
 // @Security Bearer
 // @Summary Set up OTP
 // @Description Generate a QR code for setting up OTP
-// @Tags User Account
+// @Tags Two Factor Authentication
 // @Accept json
 // @Produce json
 // @Success 200 {object} models.ResData[models.SetupOtpResponse]

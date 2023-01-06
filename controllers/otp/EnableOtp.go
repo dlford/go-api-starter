@@ -14,7 +14,7 @@ import (
 // @Security Bearer
 // @Summary Enable OTP
 // @Description Prevent logging in without OTP
-// @Tags User Account
+// @Tags Two Factor Authentication
 // @Accept json
 // @Produce json
 // @Param request body models.EnableOtpInput true "OTP code"

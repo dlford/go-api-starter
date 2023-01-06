@@ -11,7 +11,7 @@ import (
 
 // @Summary Sign In
 // @Description Create a new session (omit `otp_code` if OTP is not enabled)
-// @Tags User Account
+// @Tags Sessions
 // @Accept json
 // @Produce json
 // @Param request body models.SignInInput true "User credentials"

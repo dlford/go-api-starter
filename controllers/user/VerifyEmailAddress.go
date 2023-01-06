@@ -12,7 +12,7 @@ import (
 
 // @Summary Verify email address
 // @Description Verify the user's email address, redirects to `redirect_url` if provided and appends the query parameters `email_verified`[boolean] and `error`[string]
-// @Tags User Account
+// @Tags Email Address
 // @Accept json
 // @Produce json
 // @Param id query string true "User ID" Format(uuid)

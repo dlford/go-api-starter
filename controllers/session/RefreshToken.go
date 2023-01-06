@@ -12,7 +12,7 @@ import (
 
 // @Summary Refresh token
 // @Description Get a new bearer token using session cookies
-// @Tags User Account
+// @Tags Sessions
 // @Accept json
 // @Produce json
 // @Success 200 {object} models.ResData[models.BearerTokenResponse]

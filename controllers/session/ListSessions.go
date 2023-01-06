@@ -10,7 +10,7 @@ import (
 // @Security Bearer
 // @Summary List sessions
 // @Description List all sessions for the current logged in user
-// @Tags User Account
+// @Tags Sessions
 // @Accept json
 // @Produce json
 // @Success 200 {object} models.ResData[[]models.Session]

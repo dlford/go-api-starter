@@ -12,7 +12,7 @@ import (
 // @Security Bearer
 // @Summary Retry email verification
 // @Description Re-send the email verification email (link is valid for 7 days)
-// @Tags User Account
+// @Tags Email Address
 // @Accept json
 // @Produce json
 // @Success 200 {object} models.ResMsg

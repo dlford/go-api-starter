@@ -237,7 +237,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Application Keys"
                 ],
                 "summary": "List application keys",
                 "responses": {
@@ -281,7 +281,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Application Keys"
                 ],
                 "summary": "Create application key",
                 "parameters": [
@@ -338,7 +338,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Application Keys"
                 ],
                 "summary": "Delete application key",
                 "parameters": [
@@ -395,7 +395,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Email Address"
                 ],
                 "summary": "Verify email address",
                 "parameters": [
@@ -456,7 +456,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Email Address"
                 ],
                 "summary": "Retry email verification",
                 "responses": {
@@ -502,7 +502,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Two Factor Authentication"
                 ],
                 "summary": "Set up OTP",
                 "responses": {
@@ -546,7 +546,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Two Factor Authentication"
                 ],
                 "summary": "Disable OTP",
                 "parameters": [
@@ -601,7 +601,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Two Factor Authentication"
                 ],
                 "summary": "Enable OTP",
                 "parameters": [
@@ -658,7 +658,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Password"
                 ],
                 "summary": "Change password",
                 "parameters": [
@@ -714,7 +714,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Password"
                 ],
                 "summary": "Reset password",
                 "parameters": [
@@ -770,7 +770,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Password"
                 ],
                 "summary": "Forgot password",
                 "parameters": [
@@ -815,7 +815,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "List sessions",
                 "responses": {
@@ -854,7 +854,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Sign In",
                 "parameters": [
@@ -909,7 +909,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Sign out",
                 "responses": {
@@ -948,7 +948,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Refresh token",
                 "responses": {
@@ -988,7 +988,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "User Account"
+                    "Sessions"
                 ],
                 "summary": "Revoke session",
                 "parameters": [

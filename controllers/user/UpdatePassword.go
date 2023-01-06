@@ -12,7 +12,7 @@ import (
 // @Security Bearer
 // @Summary Change password
 // @Description Change password using existing password (omit `otp_code` if OTP is not enabled)
-// @Tags User Account
+// @Tags Password
 // @Accept json
 // @Produce json
 // @Param request body models.UpdateUserPasswordInput true "Password Reset"

@@ -11,7 +11,7 @@ import (
 // @Security Bearer
 // @Summary Delete application key
 // @Description Delete an application key for the current user
-// @Tags User Account
+// @Tags Application Keys
 // @Accept json
 // @Produce json
 // @Param id path string true "Appkey ID" Format(uuid)
