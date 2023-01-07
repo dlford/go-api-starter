@@ -413,7 +413,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "format": "uuid",
+                        "example": "b8f9c1c0-5b5e-4b4c-9c1c-0b5b5e4b4c9c",
                         "description": "User ID",
                         "name": "id",
                         "in": "query",
@@ -421,16 +421,16 @@ const docTemplate = `{
                     },
                     {
                         "type": "string",
-                        "description": "Verification Token",
-                        "name": "token",
-                        "in": "query",
-                        "required": true
+                        "description": "Redirect to this url after verification",
+                        "name": "redirectUrl",
+                        "in": "query"
                     },
                     {
                         "type": "string",
-                        "description": "Redirect URL",
-                        "name": "redirect_url",
-                        "in": "query"
+                        "description": "Token from email",
+                        "name": "token",
+                        "in": "query",
+                        "required": true
                     }
                 ],
                 "responses": {

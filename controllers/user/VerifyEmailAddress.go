@@ -15,9 +15,7 @@ import (
 // @Tags Email Address
 // @Accept json
 // @Produce json
-// @Param id query string true "User ID" Format(uuid)
-// @param token query string true "Verification Token"
-// @param redirect_url query string false "Redirect URL"
+// @Param options query models.VerifyEmailAddressInput false "Query Params"
 // @Success 200 {object} models.ResMsg
 // @Failure 400 {object} models.ResErr
 // @Failure 500 {object} models.ResErr
