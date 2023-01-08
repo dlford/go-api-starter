@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 )
 
 // @Security Bearer
@@ -22,9 +23,9 @@ import (
 // @Failure 500 {object} models.ResErr
 // @Router /user/appkeys/{id} [delete]
 func DeleteAppkey(c *gin.Context) {
-	appkeyId := c.Param("id")
-	if appkeyId == "" {
-		c.JSON(http.StatusBadRequest, models.ResErr{Error: "Appkey ID required in path"})
+	appkeyId, err := uuid.Parse(c.Param("id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, models.ResErr{Error: err.Error()})
 		return
 	}
 
