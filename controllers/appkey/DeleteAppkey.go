@@ -15,15 +15,15 @@ import (
 // @Tags Application Keys
 // @Accept json
 // @Produce json
-// @Param id path string true "Appkey ID" Format(uuid)
+// @Param appkeyId path string true "Appkey ID" Format(uuid)
 // @Success 200 {object} models.ResMsg
 // @Failure 401 {object} models.ResErr
 // @Failure 403 {object} models.ResErr
 // @Failure 404 {object} models.ResErr
 // @Failure 500 {object} models.ResErr
-// @Router /user/appkeys/{id} [delete]
+// @Router /user/appkeys/{appkeyId} [delete]
 func DeleteAppkey(c *gin.Context) {
-	appkeyId, err := uuid.Parse(c.Param("id"))
+	appkeyId, err := uuid.Parse(c.Param("appkeyId"))
 	if err != nil {
 		c.JSON(http.StatusBadRequest, models.ResErr{Error: err.Error()})
 		return

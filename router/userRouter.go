@@ -30,7 +30,7 @@ func userRouter(r *gin.Engine) {
 	us.POST("/", session.SignIn)
 	us.PATCH("/", session.RefreshToken)
 	us.DELETE("/", session.SignOut)
-	us.DELETE("/:id", session.DeleteSession)
+	us.DELETE("/:sessionId", session.DeleteSession)
 
 	uo := u.Group("/otp")
 	uo.GET("/", otp.SetupOtp)
@@ -40,5 +40,5 @@ func userRouter(r *gin.Engine) {
 	ua := u.Group("/appkeys")
 	ua.GET("/", appkey.ListAppkeys)
 	ua.POST("/", appkey.CreateAppkey)
-	ua.DELETE("/:id", appkey.DeleteAppkey)
+	ua.DELETE("/:appkeyId", appkey.DeleteAppkey)
 }

@@ -15,15 +15,15 @@ import (
 // @Tags Sessions
 // @Accept json
 // @Produce json
-// @Param id path string true "Session ID" Format(uuid)
+// @Param sessionId path string true "Session ID" Format(uuid)
 // @Success 200 {object} models.ResMsg
 // @Failure 401 {object} models.ResErr
 // @Failure 403 {object} models.ResErr
 // @Failure 404 {object} models.ResErr
 // @Failure 500 {object} models.ResErr
-// @Router /user/sessions/{id} [delete]
+// @Router /user/sessions/{sessionId} [delete]
 func DeleteSession(c *gin.Context) {
-	sessionId, err := uuid.Parse(c.Param("id"))
+	sessionId, err := uuid.Parse(c.Param("sessionId"))
 	if err != nil {
 		c.JSON(http.StatusBadRequest, models.ResErr{Error: err.Error()})
 		return
