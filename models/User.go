@@ -69,9 +69,9 @@ type ResetUserPasswordInput struct {
 }
 
 type VerifyEmailAddressInput struct {
-	ID          string `form:"id" binding:"required,uuid" example:"b8f9c1c0-5b5e-4b4c-9c1c-0b5b5e4b4c9c"` // User ID
-	Token       string `form:"token" binding:"required"` // Token from email
-	RedirectUrl string `form:"redirect_url" validate:"optional"` // Redirect to this url after verification
+	ID          string `uri:"id" binding:"required,uuid" example:"b8f9c1c0-5b5e-4b4c-9c1c-0b5b5e4b4c9c"` // User ID
+	Token       string `uri:"token" binding:"required"` // Token from email
+	RedirectUrl string `uri:"redirect_url" validate:"optional"` // Redirect to this url after verification
 }
 
 type DeleteUserInput struct {
