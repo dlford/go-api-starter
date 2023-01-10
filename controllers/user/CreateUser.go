@@ -6,7 +6,7 @@ import (
 
 	"github.com/alexedwards/argon2id"
 	"github.com/gin-gonic/gin"
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 
 	"api/controllers/session"
 	"api/mail"

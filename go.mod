@@ -9,7 +9,7 @@ require (
 	github.com/gin-gonic/gin v1.8.2
 	github.com/go-co-op/gocron v1.18.0
 	github.com/go-redis/redis/v8 v8.11.5
-	github.com/google/uuid v1.3.0
+	github.com/gofrs/uuid v4.3.1+incompatible
 	github.com/joho/godotenv v1.4.0
 	github.com/pquerna/otp v1.4.0
 	github.com/swaggo/files v1.0.0

@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 // @Security Bearer
@@ -23,7 +23,7 @@ import (
 // @Failure 500 {object} models.ResErr
 // @Router /user/sessions/{session_id} [delete]
 func DeleteSession(c *gin.Context) {
-	sessionId, err := uuid.Parse(c.Param("session_id"))
+	sessionId, err := uuid.FromString(c.Param("session_id"))
 	if err != nil {
 		c.JSON(http.StatusBadRequest, models.ResErr{Error: err.Error()})
 		return

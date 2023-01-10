@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 // @Security Bearer
@@ -23,7 +23,7 @@ import (
 // @Failure 500 {object} models.ResErr
 // @Router /user/appkeys/{appkey_id} [delete]
 func DeleteAppkey(c *gin.Context) {
-	appkeyId, err := uuid.Parse(c.Param("appkey_id"))
+	appkeyId, err := uuid.FromString(c.Param("appkey_id"))
 	if err != nil {
 		c.JSON(http.StatusBadRequest, models.ResErr{Error: err.Error()})
 		return

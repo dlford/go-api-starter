@@ -1,6 +1,6 @@
 package models
 
-import "github.com/google/uuid"
+import "github.com/gofrs/uuid"
 
 type Otp struct {
 	ID     uuid.UUID `json:"id" gorm:"primary_key;type:uuid;default:gen_random_uuid()"`

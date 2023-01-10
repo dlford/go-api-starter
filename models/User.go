@@ -3,7 +3,7 @@ package models
 import (
 	"encoding/json"
 
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 type User struct {

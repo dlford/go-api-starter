@@ -2,7 +2,7 @@ package session
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 func setSessionCookies(c *gin.Context, sessionID uuid.UUID, sessionToken []byte) {

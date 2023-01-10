@@ -4,7 +4,7 @@ import (
 	"api/constants"
 	"api/models"
 
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 func AddAccessToken(user *models.User, sessionId uuid.UUID, accessToken string) error {

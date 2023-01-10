@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/google/uuid"
+	"github.com/gofrs/uuid"
 )
 
 func GetUserFromAccessToken(bearerToken string) (models.User, int, error) {
