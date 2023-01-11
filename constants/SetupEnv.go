@@ -13,7 +13,9 @@ import (
 var GIN_MODE string
 var ACCESS_TOKEN_LIFETIME time.Duration
 var REDIS_HOST string
+var REDIS_USER string
 var REDIS_PASSWORD string
+var REDIS_SSL_ENABLED bool
 var REDIS_DB int
 var SERVICE_NAME string
 var SESSION_LIFETIME_DAYS int
@@ -38,6 +40,7 @@ var DB_USER string
 var DB_PASSWORD string
 var DB_NAME string
 var DB_SSLMODE string
+var DB_CONNECT_TIMEOUT_SECONDS int
 var EMAIL_VERIFIED_REDIRECT_URL string
 var RESET_PASSWORD_URL string
 var TRUSTED_PROXIES []string
@@ -240,4 +243,19 @@ func SetupEnv() {
 
 	s = os.Getenv("TRUSTED_PROXIES")
 	TRUSTED_PROXIES = strings.Split(s, ",")
+
+	REDIS_USER = os.Getenv("REDIS_USER")
+
+	s = os.Getenv("REDIS_SSL_ENABLED")
+	REDIS_SSL_ENABLED = s == "true"
+
+	s = os.Getenv("DB_CONNECT_TIMEOUT_SECONDS")
+	if s == "" {
+		s = "10"
+	}
+	i, err = strconv.Atoi(s)
+	if err != nil {
+		panic(err)
+	}
+	DB_CONNECT_TIMEOUT_SECONDS = i
 }

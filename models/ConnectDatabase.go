@@ -11,15 +11,15 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-
 	dsn := fmt.Sprintf(
-		"host=%s user=%s password=%s dbname=%s port=%d sslmode=%s",
+		"host=%s user=%s password=%s dbname=%s port=%d sslmode=%s connect_timeout=%d",
 		constants.DB_HOST,
 		constants.DB_USER,
 		constants.DB_PASSWORD,
 		constants.DB_NAME,
 		constants.DB_PORT,
 		constants.DB_SSLMODE,
+		constants.DB_CONNECT_TIMEOUT_SECONDS,
 	)
 
 	database, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
