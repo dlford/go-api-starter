@@ -29,6 +29,8 @@ func TestCreateUser_Valid(t *testing.T) {
 	var res models.ResData[models.BearerTokenResponse]
 	json.Unmarshal(w.Body.Bytes(), &res)
 
+	models.DB.Where("email = ?", input.Email).Delete(&models.User{})
+
 	assert.Contains(t, res.Data.BearerToken, "Bearer ")
 	assert.Equal(t, 200, w.Code)
 }
