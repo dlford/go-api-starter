@@ -2,12 +2,17 @@ package router
 
 import (
 	"api/constants"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
+
+	r.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusTemporaryRedirect, "/swagger/index.html")
+	})
 
 	if constants.TRUSTED_PLATFORM != "" {
 		r.TrustedPlatform = constants.TRUSTED_PLATFORM
